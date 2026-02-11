@@ -1,1 +1,298 @@
-# green-light
+[index.html](https://github.com/user-attachments/files/25246786/index.html)
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Green Shine Valeting</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+
+<link rel="icon" type="image/png" href="images/greenlight-logo.png">
+
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header>
+  <div class="nav-container">
+
+    <!-- Logo -->
+   <a href="#hero"> <img src="images/greenlight-logo.png" class="logo"> </a>
+
+    <!-- Mobile toggle -->
+    <div id="navToggle" class="nav-toggle">&#9776;</div>
+
+    <!-- Navigation -->
+    <nav>
+      <ul id="navMenu">
+        <li><a href="#hero">Home</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#pricing">Packages</a></li>
+        <li><a href="#calculator">Quote</a></li>
+        <li><a href="#booking">Book</a></li>
+      </ul>
+    </nav>
+
+  </div>
+</header>
+
+<!-- HERO -->
+<section id="hero" class="section-animate">
+  <h1>Green Light PWAC</h1>
+  <p>Powerwash and Auto Care</p>
+  <BR>
+  
+  <h2>We Come to You</h2>
+</section>
+
+<!-- SERVICES -->
+<section id="services" class="section-animate">
+<h2>Our Services</h2>
+
+<div class="services-grid">
+
+	<div class="card service-card">
+		<h3>Powerwash</h3>
+	</div>
+
+	<div class="card service-card">
+		<h3>Driveways</h3>
+	</div>
+
+	<div class="card service-card">
+		<h3>Patios</h3>
+	</div>
+	
+	<div class="card service-card">
+		<h3>Rendering</h3>
+	</div>
+	
+	<div class="card service-card">
+		<h3>Softwash</h3>
+	</div>
+	
+	<div class="card service-card">
+		<h3>Auto Care</h3>
+	</div>
+	
+	<div class="card service-card">
+		<h3>Exterior Wash</h3>
+	</div>
+	
+	<div class="card service-card">
+		<h3>Mini Valet</h3>
+	</div>
+	
+	<div class="card service-card">
+		<h3>Full Valet</h3>
+	</div>
+	
+	<div class="card service-card">
+		<h3>Deep Clean/Detail</h3>
+	</div>
+
+</div>
+</section>
+
+<!-- PRICING TIERS -->
+<section id="pricing" class="section-animate">
+	<h2>Packages</h2>
+
+	<div class="pricing-grid">
+
+		<div class="tier tier1">
+			<h3>Refresh</h3>
+				<h4>From €40</h4>
+				<br></br>
+					<p>Exterior prewash</p>
+					<p>Foam bath & hand wash</p>
+					<p>Wheels cleaned</p>
+					<p>Quick interior vacuum</p>
+					<p>Exterior glass cleaned</p>
+					<p>Tyres dressed</p>
+					<br></br>
+					<i>Ideal for weekly or fortnightly maintenance</i>
+					<br></br>
+					<h5>*Prices may vary by vehicle size and condition</h5>
+		</div>
+
+		<div class="tier tier2">
+			<h3>Standard</h3>
+				<h4>From €70</h4>
+				<br></br>
+					<p>Everything in Refresh, plus:</p>
+					<p>Full interior vacuum</p>
+					<p>Dashboard & doors cleaned</p>
+					<p>Door jambs</p>
+					<p>Boot vacuumed</p>
+					<br></br>
+					<i>Ideal for regular upkeep with a deeper finish</i>
+					<br></br>
+					<h5>*Prices may vary by vehicle size and condition</h5>
+		</div>
+
+		<div class="tier tier3">
+			<h3>Premium</h3>
+				<h4>From €120</h4>
+				<br></br>
+					<p>Everything in Standard, plus:</p>
+					<p>Interior deep clean (dash, doors, plastics, vents)</p>
+					<p>Exterior sealant applied</p>
+					<p>Wheels deep cleaned (faces, barrels, surrounds)</p>
+					<p>Tyres & trims dressed</p>
+					<br></br>
+					<i>Ideal for reset to new-car freshness</i>
+					<br></br>
+					<h5>*Prices may vary by vehicle size and condition</h5>
+		</div>
+
+		<div class="tier tier4">
+			<h3>Premium Plus</h3>
+				<h4>From €190</h4>
+				<br></br>
+					<p>Everything in Premium, plus:</p>
+					<p>Full interior steam clean</p>
+					<p>Carpets shampooed</p>
+					<p>Glass treated & protected</p>
+					<p>Exterior decontamination</p>
+					<br></br>
+					<i>Ideal for regular upkeep with a deeper finish</i>
+					<br></br>
+					<h5>*Prices may vary by vehicle size and condition</h5>
+		</div>
+
+	</div>
+</section>
+
+<!-- LIVE CALCULATOR -->
+<section id="calculator" class="section-animate">
+
+	<h2>Instant Quote</h2>
+
+	<div class="calculator-container">
+
+		<label>Vehicle Size</label>
+			<select id="size">
+				<option value="20">Small</option>
+				<option value="30">Medium</option>
+				<option value="40">Large</option>
+			</select>
+
+		<label>Service</label>
+			<select id="service">
+				<option value="40">Refresh</option>
+				<option value="70">Standard</option>
+				<option value="120">Premium</option>
+				<option value="190">Premium Plus</option>
+			</select>
+
+<h3>Total: €<span id="total">0</span></h3>
+
+</div>
+</section>
+
+<!-- BOOKING -->
+<section id="booking" class="section-animate">
+
+	<h2>Book Now</h2>
+
+		<div class="booking-container">
+
+			<form id="bookingForm">
+
+				<input type="text" placeholder="Name" required>
+				<input type="email" placeholder="Email" required>
+				<input type="tel" placeholder="Phone" required>
+
+			<select required>
+				<option>Refresh</option>
+				<option>Standard</option>
+				<option>Premium</option>
+				<option>Premium Plus</option>
+			</select>
+
+			<input type="date" required>
+
+			<textarea placeholder="Address" required></textarea>
+
+			<button>Submit</button>
+
+			</form>
+
+		<p id="confirm"></p>
+
+</div>
+</section>
+
+<!-- FOOTER -->
+
+<footer>
+
+	<div class="footer-wrapper">
+
+		<div class="footer-grid">
+
+			<div>
+				<h4>Green Light PWAC</h4>
+				<p>Dublin & Kildare</p>
+			</div>
+
+		<div>
+			<h4>Contact</h4>
+			<p>Phone: 087 237 3619</p>
+			<p>Email: greenlight.pwac@gmail.com</p>
+		</div>
+
+		<div>
+			<h4>Follow Us</h4>
+
+		<div class="social-icons">
+		<!-- scoial icons here -->
+			<a href="https://www.instagram.com/greenlightpwac?igsh=MzhxdTB2ZDczcTFr" aria-label="Instagram">
+		<!-- Instagram -->
+				<svg viewBox="0 0 24 24">
+					<path d="M7 2C4.2 2 2 4.2 2 7v10c0 2.8 2.2 5 5 5h10c2.8 0 5-2.2 5-5V7c0-2.8-2.2-5-5-5H7zm10 2c1.7 0 3 1.3 3 3v10c0 1.7-1.3 3-3 3H7c-1.7 0-3-1.3-3-3V7c0-1.7 1.3-3 3-3h10zm-5 3a5 5 0 100 10 5 5 0 000-10zm0 2a3 3 0 110 6 3 3 0 010-6zm5.5-.5a1 1 0 100 2 1 1 0 000-2z"/>
+				</svg>
+			</a>
+
+			<a href="#" aria-label="Facebook">
+		<!-- Facebook -->
+				<svg viewBox="0 0 24 24">
+					<path d="M22 12a10 10 0 10-11.5 9.9v-7h-2v-3h2V9.5c0-2 1.2-3.1 3-3.1.9 0 1.8.1 1.8.1v2h-1c-1 0-1.3.6-1.3 1.2V12h2.6l-.4 3h-2.2v7A10 10 0 0022 12z"/>
+				</svg>
+			</a>
+
+			<a href="#" aria-label="TikTok">
+		<!-- TikTok -->
+				<svg viewBox="0 0 24 24">
+					<path d="M21 8.5a6.5 6.5 0 01-4-1.4v7.4a5.5 5.5 0 11-5.5-5.5c.4 0 .7 0 1 .1v3a2.5 2.5 0 10 2.5 2.5V2h3a6.5 6.5 0 003.5 3.5v3z"/>
+				</svg>
+			</a>
+		</div>
+
+	</div>
+
+</div>
+
+<!-- RIGHT SIDE MAP -->
+<div class="footer-map">
+<iframe src="https://www.google.com/maps?q=dublin+kildare&output=embed"></iframe>
+</div>
+
+</div>
+
+<p class="copyright">© 2026 Green Light PWAC</p>
+
+</footer>
+
+
+<!-- WHATSAPP -->
+<a class="whatsapp" href="https://wa.me/353872373619"><b>WhatsApp Us</a>
+
+<script src="script.js"></script>
+</body>
+</html>
