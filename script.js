@@ -4,6 +4,15 @@ const navMenu=document.getElementById("navMenu");
 
 navToggle.onclick=()=>navMenu.classList.toggle("show");
 
+/* CLOSE MOBILE MENU AFTER CLICK */
+
+document.querySelectorAll("#navMenu a").forEach(link=>{
+link.addEventListener("click",()=>{
+navMenu.classList.remove("show");
+});
+});
+
+
 /* NAVBAR TOGGLE */
 // Select all nav links and sections
 const navLinks = document.querySelectorAll("nav a");
@@ -93,32 +102,106 @@ window.addEventListener("load", animate);
 
 
 /* LIVE CALCULATOR */
-const size=document.getElementById("size");
+let selectedSize = 0; // default Small
 const service=document.getElementById("service");
+const extras=document.getElementById("extras");
 const total=document.getElementById("total");
 
 function updateTotal(){
-total.innerText=Number(size.value)+Number(service.value);
+total.innerText = Number(selectedSize) + Number(service.value) + Number(extras.value);
 }
 
-size.addEventListener("change",updateTotal);
 service.addEventListener("change",updateTotal);
+extras.addEventListener("change",updateTotal);
+
+function updateTotal(){
+	const newTotal = Number(selectedSize) + Number(service.value) + Number(extras.value);
+	
+	const currentTotal = Number(total.innerText);
+	
+	animateValue(currentTotal, newTotal, 400); //400ms animation
+};
+
+function animateValue(start, end, duration) {
+
+  let startTime = null;
+
+  function animation(currentTime) {
+    if (!startTime) startTime = currentTime;
+
+    const progress = currentTime - startTime;
+    const percentage = Math.min(progress / duration, 1);
+
+    const value = Math.round(start + (end - start) * percentage);
+
+    total.innerText = value;
+
+    if (percentage < 1) {
+      requestAnimationFrame(animation);
+    }
+  }
+
+  requestAnimationFrame(animation);
+}
+
+
+/* VEHICLE CARD SELECTION */
+
+const vehicleCards = document.querySelectorAll(".vehicle-card");
+
+vehicleCards.forEach(card=>{
+card.addEventListener("click",()=>{
+
+vehicleCards.forEach(c=>c.classList.remove("active"));
+card.classList.add("active");
+
+selectedSize = card.dataset.size;
 updateTotal();
 
-/* BOOKING VALIDATION */
-const form=document.getElementById("bookingForm");
-
-form.addEventListener("submit",e=>{
-e.preventDefault();
-
-if(!form.checkValidity()){
-alert("Please fill all fields");
-return;
-}
-
-document.getElementById("confirm").innerText="Booking received!";
-form.reset();
 });
+});
+
+
+/* BOOKING VALIDATION */ 
+//const form=document.getElementById("bookingForm"); 
+//form.addEventListener("submit",e=>{ 
+	//e.preventDefault(); 
+		//if(!form.checkValidity()){ 
+			//alert("Please fill all fields"); 
+			//return; //} 
+
+//document.getElementById("confirm").innerText="Booking received!"; 
+
+const form = document.getElementById("bookingForm");
+const modal = document.getElementById("thankYouModal");
+
+form.addEventListener("submit", function(e) {
+
+  e.preventDefault();
+
+  const formData = new FormData(form);
+
+  fetch("/", {
+    method: "POST",
+    headers: { "Content-Type": "application/x-www-form-urlencoded" },
+    body: new URLSearchParams(formData).toString()
+  })
+  .then(() => {
+    modal.style.display = "flex";
+    form.reset();
+  })
+  .catch(() => {
+    alert("Oops! Something went wrong.");
+  });
+
+});
+
+function closeModal() {
+  modal.style.display = "none";
+}
+ 
+//form.reset(); });
+
 
 /* SCROLL ANIMATIONS */
 const animated = document.querySelectorAll(".section-animate");
