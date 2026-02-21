@@ -131,7 +131,7 @@ width:100%;
   justify-content: center; /* vertically centered */
   align-items: center;    /* horizontally centered */
   
-  background-image: url('images/hero1.jpg');
+  background-image: url('images/greenlight-logo.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -141,6 +141,7 @@ width:100%;
   text-align: center;
   padding: 0 20px;
 }
+
 
 /* Centered dark overlay gradient */
 #hero::before {
@@ -274,28 +275,133 @@ border:2px solid var(--green);
   /* Added easing for smooth hover */
 /*}*/
 
+/* PACKAGES */
 .pricing-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 25px; /* space between packages */
-  max-width: 1000px; /* keeps grid centered */
-  margin: 0 auto;
-  align-items: stretch; /* ensures all tiers same height */
+	display: grid; /* 2 responsive columns */
+	grid-template-columns: 1fr; /*repeat(auto-fit, minmax(250px, 1fr));*//* 1 Mobile default responsive columns */
+	gap: 25px; /*30px;                 /* space between tiers */
+	max-width: 1100px;         /* keeps grid centered */
+	margin: 0 auto;
+	/*align-items: stretch;      /* keeps all tiers equal height */
 }
 
+/* Desktop */
+@media (min-width: 992px) {
+  .pricing-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Features container spacing */
+.features {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /*Always side by side*/
+  gap: 25px;
+  margin: 20px 0;
+}
+
+/* Features container spacing */
+/*.features {
+  margin: 20px 0;
+}*/
+
+/* Each grouped section */
+.feature-group {
+  margin-bottom: 20px;
+}
+
+.feature-group:first-child {
+	border-right: 1px solid rgba(255,255,255,0.3);
+	padding-right: 20px;
+}
+
+.feature-group:last-child{
+	padding-left:20px;
+}
+
+
+/* Section headings (Exterior / Interior) */
+.feature-group h6 {
+  font-size: 20px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+  padding-bottom: 6px;
+  border-bottom: 1px solid rgba(255,255,255,0.3);
+}
+
+/* Remove default list style */
+.feature-group ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Individual feature item */
+.feature-group li {
+  position: relative;
+  padding-left: 18px;
+  margin-bottom: 8px;
+  font-size: 20px;
+  line-height: 1.4;
+}
+
+/* Small checkmark icon */
+.group1 li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: #0d652d;
+  font-weight: bold;
+}
+
+/* Small checkmark icon */
+.group2 li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: #0d652d;
+  font-weight: bold;
+}
+
+/* Small checkmark icon */
+.group3 li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: #8aff8a;
+  font-weight: bold;
+}
+
+/* Small checkmark icon */
+.group4 li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: #8aff8a;
+  font-weight: bold;
+}
+
+
+
 .tier {
-  opacity: 0;
-  transform: translateY(40px);
-  transition: transform 0.4s ease, opacity 0.8s ease, box-shadow 0.4s ease;
   position: relative;
   border-radius: 12px;
-  padding: 25px; /* slightly smaller padding to reduce bulk */
-  text-align: center;
+  padding: 30px;
   color: white;
-  min-height: 380px; /* ensures consistent height */
+  text-align: left;
+
+  /* Fade-in animation settings */
+  opacity: 0;
+  transform: translateY(40px);
+  transition: transform 0.4s ease,
+              opacity 0.8s ease,
+              box-shadow 0.4s ease;
+
+  /* Keeps content stacked cleanly */
   display: flex;
   flex-direction: column;
-  justify-content: space-between; /* keeps content evenly spaced */
   box-sizing: border-box;
 }
 
@@ -317,7 +423,7 @@ border:2px solid var(--green);
 
 .tier h3 {
   margin-bottom: 15px;
-  font-size: 22px;
+  font-size: 25px;
 }
 
 .tier h4 {
@@ -342,6 +448,7 @@ border:2px solid var(--green);
 .tier h5 {
   margin-top: 10px;
   font-size: 12px;
+  font-weight: 200;
 }
 
 
@@ -361,6 +468,23 @@ border:2px solid var(--green);
 .tier:hover::after {
   box-shadow: 0 0 20px #00ff7f inset;
 }
+
+/*.tier {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: transform 0.4s ease, opacity 0.8s ease, box-shadow 0.4s ease;
+  position: relative;
+  border-radius: 12px;
+  padding: 25px; /* slightly smaller padding to reduce bulk */
+  /*text-align: center;
+  color: white;
+  min-height: 380px; /* ensures consistent height */
+  /*display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* keeps content evenly spaced */
+ /* box-sizing: border-box;
+}*/
+
 
 /*.pricing-grid{
 display:grid;
@@ -409,6 +533,48 @@ font-weight:bold;
 color:var(--green3);
 }
 
+/* VEHICLE CARDS */
+
+.vehicle-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(140px,1fr));
+gap:15px;
+margin-bottom:25px;
+}
+
+.vehicle-card{
+background:#eee;
+padding:15px;
+border-radius:12px;
+text-align:center;
+cursor:pointer;
+transition:.3s;
+border:2px solid transparent;
+touch-action: manipulation;
+}
+
+.vehicle-card img{
+width:100%;
+max-height:80px;
+object-fit:contain;
+margin-bottom:10px;
+}
+
+.vehicle-card:hover{
+transform:translateY(-5px);
+box-shadow:0 10px 25px rgba(76,175,80,.3);
+border-color:var(--green);
+}
+
+/* Active selected card */
+
+.vehicle-card.active{
+border:2px solid var(--green);
+box-shadow:0 0 15px rgba(76,175,80,.5);
+background:#f8fff8;
+}
+
+
 
 /* BOOKING */
 .booking-container{
@@ -428,10 +594,58 @@ border:none;
 border-radius:6px;
 }
 
-button{
+/*button{
 background:var(--green);
 font-weight:bold;
+}*/
+
+.submit{
+	background:var(--green);
+	font-weight:bold;
 }
+
+.submit:hover{
+transform:translateY(-5px);
+box-shadow:0 10px 25px rgba(76,175,80,.3);
+border:2px solid var(--green);
+}
+
+/*Thank you Modal*/
+
+.modal{
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,.7);
+  display:none;
+  justify-content:center;
+  align-items:center;
+  z-index:1000;
+}
+
+.modal-content{
+  background:#111;
+  padding:40px;
+  border-radius:12px;
+  text-align:center;
+  color:white;
+  max-width:400px;
+  box-shadow:0 0 25px #4caf50;
+}
+
+.modal-content h3{
+  color:#4caf50;
+}
+
+.modal-content button{
+  margin-top:20px;
+  padding:10px 20px;
+  border:none;
+  background:#43a047;
+  color:white;
+  cursor:pointer;
+  border-radius:6px;
+}
+
 
 /* WHATSAPP */
 
@@ -471,12 +685,19 @@ padding:50px 20px;
 }
 
 .footer-wrapper{
-max-width:1100px;
-margin:auto;
-display:grid;
-grid-template-columns:2fr 1fr;
-gap:40px;
-align-items:center;
+	max-width:1100px;
+	margin:auto;
+	display:grid;
+	grid-template-columns: 1fr; /*Mobile = stacked*/
+	gap:40px;
+	align-items:start;
+}
+
+/* Desktop */
+@media (min-width: 768px) {
+  .footer-wrapper{
+    grid-template-columns:2fr 1fr; /* Content | Map */
+  }
 }
 
 .footer-grid{
@@ -535,7 +756,7 @@ opacity:.6;
 }
 
 /* MOBILE */
-@media(max-width:768px){
+@media(max-width: 991px){
 
 /*NAVBAR MOBILE*/
 nav ul{
@@ -555,10 +776,16 @@ nav ul.show{
 
 .nav-toggle{
 	display:block;
+	margin-left:auto;
 	color:white;
 	font-size:28px;
 	cursor:pointer;
 }
+
+#navMenu{
+transition:.3s;
+}
+
 
 /*HERO MOBILE*/
 #hero {
@@ -581,13 +808,93 @@ section{padding:60px 15px;}
 .services-grid {gap:15px;}
 
 /*PACKAGES MOBILE*/
-.pricing-grid {
+/*.pricing-grid {
     grid-template-columns: 1fr; /* single column on small screens */
-    gap: 20px;
+  /*  gap: 20px;
+}*/
+
+.pricing-grid {
+		grid-template-columns: 1fr;/*repeat(2, 1fr); /*2 per row on desktop*/
 }
 
-  .tier {
+/* Features container spacing */
+.features {
+  margin: 20px 0;
+}
+
+/* Each grouped section */
+.feature-group {
+  margin-bottom: 20px;
+}
+
+/* Section headings (Exterior / Interior) */
+.feature-group h6 {
+  font-size: 13px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+  padding-bottom: 6px;
+  border-bottom: 1px solid rgba(255,255,255,0.3);
+}
+
+/* Remove default list style */
+.feature-group ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Individual feature item */
+.feature-group li {
+  position: relative;
+  padding-left: 18px;
+  margin-bottom: 8px;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+/* Small checkmark icon */
+.feature-group li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: #8aff8a;
+  font-weight: bold;
+}
+
+.tier {
     min-height: auto; /* flexible height on mobile */
+}
+
+/*CALCULATOR MOBILE*/
+.calculator-container{
+padding:20px;
+}
+
+.vehicle-grid{
+grid-template-columns:repeat(2,1fr);
+gap:12px;
+}
+
+.vehicle-card{
+padding:12px;
+}
+
+.vehicle-card:active{
+transform:scale(.97);
+}
+
+h3{
+text-align:center;
+margin-top:15px;
+}
+
+}
+
+/* smoother mobile taps */
+.vehicle-card{
+touch-action:manipulation;
 }
 
 /*FOOTER MOBILE*/
