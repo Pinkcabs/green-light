@@ -1209,6 +1209,61 @@ margin-top:15px;
 touch-action:manipulation;
 }
 
+/* MOBILE OUTDOOR */
+.outdoor-grid {
+		grid-template-columns: 1fr;/*repeat(2, 1fr); /*2 per row on desktop*/
+}
+
+/* Features container spacing */
+.outdoor-features {
+  margin: 20px 0;
+}
+
+/* Each grouped section */
+.outdoor-feature-group {
+  margin-bottom: 20px;
+}
+
+/* Section headings (Exterior / Interior) */
+.outdoor-feature-group h6 {
+  font-size: 13px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+  padding-bottom: 6px;
+  border-bottom: 1px solid rgba(255,255,255,0.3);
+}
+
+/* Remove default list style */
+.outdoor-feature-group ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Individual feature item */
+.outdoor-feature-group li {
+  position: relative;
+  padding-left: 18px;
+  margin-bottom: 8px;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+/* Small checkmark icon */
+.outdoor-feature-group li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: #8aff8a;
+  font-weight: bold;
+}
+
+.outdoor-tier {
+    min-height: auto; /* flexible height on mobile */
+}
+
 /*FOOTER MOBILE*/
 .footer-wrapper{
 	grid-template-columns:1fr;
@@ -1239,4 +1294,5 @@ touch-action:manipulation;
 	transform:scale(1.2);
 }
 }
+
 
