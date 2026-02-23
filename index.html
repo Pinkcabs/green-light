@@ -32,6 +32,7 @@
         <li><a href="#services">Services</a></li>
         <li><a href="#pricing">Packages</a></li>
         <li><a href="#calculator">Quote</a></li>
+		<li><a href="#outdoor">Outdoor</a></li>
         <li><a href="#booking">Book</a></li>
       </ul>
     </nav>
@@ -250,6 +251,7 @@
 							<li>Exterior sealant applied</li>
 							<li>Hand dried using microfiber towel</li>
 							<li>Wheels, barrels & arches cleaned</li>
+							<li>Tyres cleaned & dressed</li>
 							<li>Glass treated & protected</li>
 						</ul>
 				</div>
@@ -263,6 +265,7 @@
 							<li>Full steam deep clean</li>
 							<li>Leather or fabric conditioned</li>
 							<li>Dashboard & console detailed</li>
+							<li>Door & boot shuts cleaned</li>
 							<li>Windows cleaned (inside & out)</li>
 						</ul>
 				</div>
@@ -294,17 +297,17 @@
 			<div class="vehicle-grid">
 
 				<div class="vehicle-card active" data-size="0">
-					<img src="images/Small_Car.png">
+					<img src="images/small_car.png">
 					<h4>Small</h4>
 				</div>
 
 				<div class="vehicle-card" data-size="10">
-					<img src="images/SUV.png">
+					<img src="images/suv.png">
 					<h4>Medium</h4>
 				</div>
 
 				<div class="vehicle-card" data-size="20">
-					<img src="images/Large_SUV.png">
+					<img src="images/large_suv.png">
 					<h4>Large</h4>
 				</div>
 			</div>
@@ -339,6 +342,55 @@
 </div>
 </section>
 
+<!-- OUTDOOR -->
+<section id="outdoor" class="section-animate">
+	<h2>Outdoor</h2>
+	
+<!-- Grid container that holds all pricing tiers -->
+	<div class="outdoor-grid">
+
+		<div class="outdoor-tier">
+		<!-- Outdoor Title -->
+			<h3>Services</h3>
+				
+				<p>Whether you need to cleanyour homes exterior, driveways, patios render or walkways our power washing services area
+				designed to deliver stunning results.</p>
+				
+				<p>Using high pressure water jets and ECO friendly chemical products to remove stubborn dirt and grime (algae, lichen, moss, mould) returning surfaces to brand new.</p>
+				
+				<!-- Features Container -->
+				<div class="outdoor-features">
+					
+				<!-- Includes Group -->
+				<div class="outdoor-feature-group">
+					<h6>Includes</h6>
+						<ul>
+							<li>Exterior Power Washing</li>
+							<li>Driveways / Paths</li>
+							<li>Patio / Decking</li>
+							<li>Rendering</li>
+							<li>Soft Washing</li>
+							<li>Re-sanding</li>
+							<li>Sealing</li>
+						</ul>
+				</div>
+					
+				<!-- Prices Group -->
+				<div class="outdoor-feature-group">
+					<h6>Prices</h6>
+						<ul>
+							<li>Contact us for a FREE quote</li>
+							<li>Prices from €4 to €5 per square meter</li>
+							<li>Chemical treatment prices from€6 to €7 per square meter</li>
+						</ul>						
+				</div>
+
+				</div>
+		</div>
+</div>
+</section>
+
+
 <!-- BOOKING -->
 <section id="booking" class="section-animate">
 
@@ -360,20 +412,46 @@
 				<input type="email" name="email" placeholder="Email" required>
 				<input type="tel" name="phone" placeholder="Phone" required>
 
-			<select name="package" required>
-				<option value="">Select Package</option>
-				<option value="Refresh">Refresh</option>
-				<option value="Standard">Standard</option>
-				<option value="Premium">Premium</option>
-				<option value="Premium Plus">Premium Plus</option>
+			<select name="serviceType" id="serviceType" required>
+				<option value="">Select Service Type</option>
+				<option value="Car Detail">Car Detail</option>
+				<option value="Outdoor">Outdoor</option>
 			</select>
 			
-			<select name="extras" required>
-				<option value="0">No Extras</option>
-				<option value="30">Engine Bay</option>
-				<option value="40">Heavy/Dirt Stain Removal</option>
-				<option value="50">Pet Hair Removal</option>
-			</select>
+			<div id="carOptions">
+				<select name="package">
+					<option value="">Select Package</option>
+					<option value="Refresh">Refresh</option>
+					<option value="Standard">Standard</option>
+					<option value="Premium">Premium</option>
+					<option value="Premium Plus">Premium Plus</option>
+				</select>
+
+				<select name="extras">
+					<option value="">No Extras</option>
+					<option value="Engine Bay">Engine Bay</option>
+					<option value="Heavy/Dirt">Heavy/Dirt Stain Removal</option>
+					<option value="Pet Hair">Pet Hair Removal</option>
+				</select>
+
+			</div>
+			
+			<div id="outdoorOptions" style="display:none; margin-top:20px;">
+
+				<label>Select Outdoor Services:</label>
+					<div class="checkbox-group">
+						<label class="custom-checkbox"><input type="checkbox" name="outdoorServices[]" value="Exterior Power Washing"><span class="checkmark"></span>Exterior Power Washing</label>
+						<label class="custom-checkbox"><input type="checkbox" name="outdoorServices[]" value="Driveways / Paths"><span class="checkmark"></span>Driveways / Paths</label>
+						<label class="custom-checkbox"><input type="checkbox" name="outdoorServices[]" value="Patio / Decking"><span class="checkmark"></span>Patio / Decking</label>
+						<label class="custom-checkbox"><input type="checkbox" name="outdoorServices[]" value="Rendering"><span class="checkmark"></span>Rendering</label>
+						<label class="custom-checkbox"><input type="checkbox" name="outdoorServices[]" value="Soft Washing"><span class="checkmark"></span>Soft Washing</label>
+						<label class="custom-checkbox"><input type="checkbox" name="outdoorServices[]" value="Re-sanding"><span class="checkmark"></span>Re-sanding</label>
+						<label class="custom-checkbox"><input type="checkbox" name="outdoorServices[]" value="Sealing"><span class="checkmark"></span>Sealing</label>
+					</div>
+
+  <input type="number" name="squareMeters" placeholder="Approximate square meters">
+
+</div>
 
 				<input type="date" name="date" required>
 					<textarea name="address" placeholder="Address" required></textarea>
@@ -465,4 +543,3 @@
 <script src="script.js"></script>
 </body>
 </html>
-
