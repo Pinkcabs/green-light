@@ -99,8 +99,6 @@ function animate(){
 window.addEventListener("scroll", animate);
 window.addEventListener("load", animate);
 
-
-
 /* LIVE CALCULATOR */
 let selectedSize = 0; // default Small
 const service=document.getElementById("service");
@@ -161,6 +159,23 @@ updateTotal();
 });
 });
 
+/*BOOKING FORM*/
+
+const serviceType = document.getElementById("serviceType");
+const carOptions = document.getElementById("carOptions");
+const outdoorOptions = document.getElementById("outdoorOptions");
+
+serviceType.addEventListener("change", function() {
+
+  if (this.value === "Outdoor") {
+    outdoorOptions.style.display = "block";
+    carOptions.style.display = "none";
+  } else {
+    outdoorOptions.style.display = "none";
+    carOptions.style.display = "block";
+  }
+
+});
 
 /* BOOKING VALIDATION */ 
 //const form=document.getElementById("bookingForm"); 
