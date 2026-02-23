@@ -41,7 +41,7 @@ background:white;
 h2{
 text-align:center;
 margin-bottom:40px;
-font-size:32px;
+font-size:35px;
 }
 
 h3{
@@ -574,11 +574,221 @@ box-shadow:0 0 15px rgba(76,175,80,.5);
 background:#f8fff8;
 }
 
+/*OUTDOOR*/
+/*.outdoor-grid{
+	display:flex;
+	justify-content:center;
+}
+
+/*.outdoor-grid*.outdoor-tier{
+	/*max-width:900px;
+	width:100%;
+	/*opacity: 0;
+	transform: translateY(40px);*/
+	/*transition: transform 0.4s ease,
+              opacity 0.8s ease,
+              box-shadow 0.4s ease;
+
+	/* Keeps content stacked cleanly */
+	/*display: flex;
+	flex-direction: column;
+	box-sizing: border-box;*/
+	/*background: var(--green3);
+  max-width: 850px;      /* controls width */
+  /*width: 90%;
+  margin: 0 auto;        /* centers it */
+  /*padding: 60px 70px;
+  border-radius: 20px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.12);
+
+  display: flex;
+  flex-direction: column;
+
+  opacity: 0;
+  transform: translateY(40px);
+  transition: transform 0.4s ease,
+              opacity 0.8s ease,
+              box-shadow 0.4s ease;
+}
+
+.outdoor-tier.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.outdoor-tier:hover {
+  transform: translateY(-8px) scale(1.05); /* small lift + scale */
+ /* box-shadow: 0 15px 30px rgba(76,175,80,0.4); /* soft glow instead of neon-only */
+}
+
+/*.outdoor-tier h3 {
+  margin-bottom: 15px;
+  font-size: 25px;
+}
+
+.outdoor-tier h4 {
+  margin-bottom: 15px;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.outdoor-tier p {
+  border-bottom: 1px solid rgba(255,255,255,0.2);
+  padding-bottom: 6px;
+  margin-bottom: 8px;
+}
+
+.outdoor-tier h5 {
+  margin-top: 10px;
+  font-size: 12px;
+  font-weight: 200;
+}
+
+
+/* Subtle gradient glow effect */
+/*.outdoor-tier::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  border-radius: 12px;
+  box-shadow: 0 0 0px transparent;
+  transition: box-shadow 0.4s ease;
+}
+
+.outdoor-tier:hover::after {
+  box-shadow: 0 0 20px #00ff7f inset;
+}
+
+/* OUTDOOR */
+.outdoor-grid {
+  display: block;
+  /*justify-content: center;*/
+}
+
+.outdoor-tier {
+  background: var(--green3);
+  max-width: 850px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 60px 70px;
+  border-radius: 20px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.12);
+
+  /*display: flex;
+  flex-direction: column;*/
+  position: relative;
+
+  /*opacity: 0;*/
+  /*transform: translateY(40px);*/
+  transition: transform 0.4s ease,
+              opacity 0.8s ease,
+              box-shadow 0.4s ease;
+}
+
+/*.outdoor-tier.show {
+  opacity: 1;
+  transform: translateY(0);
+}*/
+
+.outdoor-tier:hover {
+  transform: translateY(-8px) scale(1.05); /* small lift + scale */
+  box-shadow: 0 20px 40px rgba(0,0,0,0.18); /* soft glow instead of neon-only */
+}
+
+.outdoor-features {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  margin-top: 50px;
+}
+
+.outdoor-tier h3 {
+  margin-bottom: 15px;
+  font-size: 25px;
+  color: white;
+  justify-content: center;
+}
+
+.outdoor-tier h6 {
+  margin-bottom: 15px;
+  font-size: 18px;
+  font-weight: 650;
+  color: white;
+}
+
+.outdoor-tier p {
+  border-bottom: 1px solid rgba(255,255,255,0.2);
+  padding-bottom: 6px;
+  margin-bottom: 8px;
+  font-size: 12;
+  color: white;
+}
+
+.outdoor-tier h5 {
+  margin-top: 10px;
+  font-size: 12px;
+  font-weight: 200;
+}
+
+.outdoor-feature-group:first-child {
+  border-right: 1px solid rgba(255,255,255,0.4);
+  padding-right: 40px;
+}
+
+.outdoor-feature-group:last-child {
+  padding-left: 40px;
+}
+
+/* Remove default list style */
+.outdoor-feature-group ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Individual feature item */
+.outdoor-feature-group li {
+  position: relative;
+  padding-left: 18px;
+  margin-bottom: 8px;
+  font-size: 15px;
+  line-height: 1.4;
+  color: white;
+}
+
+/* Small checkmark icon */
+.outdoor-feature-group li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: #8aff8a;
+  font-weight: bold;
+}
+/* Subtle gradient glow effect */
+.outdoor-tier::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  border-radius: 20px;
+  box-shadow: 0 0 0px transparent;
+  transition: box-shadow 0.4s ease;
+}
+
+.outdoor-tier:hover::after {
+  box-shadow: 0 0 20px #00ff7f inset;
+}
 
 
 /* BOOKING */
 .booking-container{
-max-width:500px;
+max-width:700px;
 margin:auto;
 background:var(--card-grey);
 padding:25px;
@@ -592,6 +802,105 @@ padding:12px;
 margin:10px 0;
 border:none;
 border-radius:6px;
+}
+
+/*.checkbox-group {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 14px 30px; /*Vertical | Horizontal*/
+  /*margin-top: 10px;
+}
+
+.checkbox-group label {
+  font-size: 14px;
+  display: flex;
+  gap: 8px;
+  align-items: flex-start; /*Aligns checkbox to the top line of the text*/
+  /*line-height: 1.3;
+}
+
+.checkbox-group input[type="checkbox"] {
+  margin: 3px 0 0 0;
+}*/
+
+.checkbox-group {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 15px;
+}
+
+.checkbox-group label {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 15px;
+  line-height: 1.4;
+}
+
+.checkbox-group input[type="checkbox"] {
+  width: auto;
+  margin: 0;
+}
+
+/* Hide default checkbox */
+.custom-checkbox input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+/* Label container */
+.custom-checkbox {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+  font-size: 15px;
+  line-height: 1.4;
+}
+
+/* Custom square box */
+.custom-checkbox .checkmark {
+  width: 18px;
+  height: 18px;
+  border: 2px solid #4CAF50;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+  display: inline-block;
+  position: relative;
+}
+
+/* Hover effect */
+.custom-checkbox:hover .checkmark {
+  border-color: #8aff8a;
+  box-shadow: 0 0 6px rgba(138,255,138,0.6);
+}
+
+/* Checked state */
+.custom-checkbox input:checked + .checkmark {
+  background-color: #4CAF50;
+  border-color: #4CAF50;
+}
+
+/* Check icon */
+.custom-checkbox .checkmark::after {
+  content: "";
+  position: absolute;
+  left: 5px;
+  top: 1px;
+  width: 4px;
+  height: 9px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg) scale(0);
+  transition: transform 0.2s ease;
+}
+
+/* Animate check in */
+.custom-checkbox input:checked + .checkmark::after {
+  transform: rotate(45deg) scale(1);
 }
 
 /*button{
@@ -930,8 +1239,3 @@ touch-action:manipulation;
 	transform:scale(1.2);
 }
 }
-
-
-
-
-
